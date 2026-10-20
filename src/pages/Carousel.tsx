@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { useLang } from '../i18n/LangContext'
-import placeholder from '../assets/project-placeholder.png'
+import { projectImage } from '../lib/projectImages'
 
 const INTERVAL = 7000
 
@@ -52,7 +52,7 @@ export function Carousel() {
                 <span>{p.year}</span>
               </span>
               <span className="car-img">
-                <img src={placeholder} alt="" draggable={false} />
+                <img src={projectImage(p.name)} alt="" draggable={false} />
               </span>
               <span className="car-name display">{p.name}</span>
               <span className="car-tags">
