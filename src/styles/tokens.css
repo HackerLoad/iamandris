@@ -26,6 +26,7 @@
   --s-96: 96px;
 
   --nav-h: 48px;
+  --bar-clear: 88px;
   --fs-display-xl: clamp(3rem, 14vw, 14rem);
   --fs-menu: clamp(2.5rem, 9vw, 8rem);
   --fs-wordmark: clamp(16px, 1.8vw, 22px);

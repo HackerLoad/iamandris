@@ -77,3 +77,33 @@
 .projects .sc-section:last-child {
   border-bottom: 0;
 }
+
+/* Mobil: jede Section füllt den Bildschirm, unten bleibt Platz für die Safari-Leiste */
+@media (max-width: 720px) {
+  html {
+    scroll-snap-type: y proximity;
+  }
+
+  .hero,
+  .projects,
+  .about,
+  .contact {
+    min-height: 100svh;
+    padding-bottom: var(--bar-clear);
+    scroll-snap-align: start;
+  }
+
+  .hero,
+  .projects,
+  .contact {
+    height: 100svh;
+  }
+
+  .hero {
+    padding-top: var(--nav-h);
+  }
+
+  .hero-intro {
+    padding-bottom: var(--s-12);
+  }
+}

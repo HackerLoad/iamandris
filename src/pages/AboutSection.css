@@ -93,7 +93,7 @@
   }
 
   .about-img {
-    flex: 0 0 22svh;
+    flex: 0 0 18svh;
     border-right: 0;
     border-bottom: var(--line);
   }
