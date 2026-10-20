@@ -106,3 +106,9 @@ ol {
 .grid12 span {
   border-left: 1px solid var(--grid-line);
 }
+
+img {
+  -webkit-user-drag: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}

@@ -1,7 +1,7 @@
 import { Link } from 'react-router'
 import { useLang } from '../i18n/LangContext'
 import { buildPath } from '../i18n/routes'
-import portrait from '../assets/portrait.jpg'
+import portrait from '../assets/portrait.webp'
 import './AboutSection.css'
 
 export function AboutSection() {
@@ -11,7 +11,7 @@ export function AboutSection() {
   return (
     <section className="about" id="about">
       <figure className="about-img">
-        <img src={portrait} alt="" />
+        <img src={portrait} alt="" draggable={false} />
         <figcaption className="label">[{a.portrait}]</figcaption>
       </figure>
 

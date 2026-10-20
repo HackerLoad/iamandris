@@ -1,6 +1,6 @@
-import placeholder from '../assets/project-placeholder.png'
-import walletStalker from '../assets/walletstalker.jpg'
-import touchBarText from '../assets/touchbartext.png'
+import placeholder from '../assets/project-placeholder.webp'
+import walletStalker from '../assets/walletstalker.webp'
+import touchBarText from '../assets/touchbartext.webp'
 
 const images: Record<string, string> = {
   touchBarText,
