@@ -1,0 +1,42 @@
+.footer {
+  display: flex;
+}
+
+.footer > * {
+  padding: var(--s-12);
+}
+
+.footer-copy {
+  flex: 1;
+  min-width: 0;
+}
+
+.footer-link {
+  border-left: var(--line);
+}
+
+.footer-link:hover,
+.footer-link:focus-visible {
+  background: var(--ink);
+  color: var(--bg);
+}
+
+@media (max-width: 480px) {
+  .footer {
+    flex-wrap: wrap;
+  }
+
+  .footer-copy {
+    flex: 1 0 100%;
+    border-bottom: var(--line);
+  }
+
+  .footer-link {
+    flex: 1;
+    border-left: 0;
+  }
+
+  .footer-link + .footer-link {
+    border-left: var(--line);
+  }
+}

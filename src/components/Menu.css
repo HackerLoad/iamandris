@@ -1,0 +1,160 @@
+.menu {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  padding-top: var(--nav-h);
+  background: var(--inv-bg);
+  color: var(--inv-ink);
+  overflow-y: auto;
+  clip-path: inset(0 0 100% 0);
+  visibility: hidden;
+  transition:
+    clip-path 360ms steps(6),
+    visibility 0s steps(1) 360ms;
+}
+
+.menu.is-open {
+  clip-path: inset(0 0 0 0);
+  visibility: visible;
+  transition:
+    clip-path 360ms steps(6),
+    visibility 0s steps(1);
+}
+
+.menu li,
+.menu-foot {
+  opacity: 0;
+}
+
+.menu.is-open li,
+.menu.is-open .menu-foot {
+  opacity: 1;
+  transition: opacity 0s steps(1) calc(var(--i) * 60ms);
+}
+
+.menu-row {
+  display: grid;
+  grid-template-columns: clamp(40px, 8vw, 120px) minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--s-12);
+  padding: var(--s-12);
+  border-bottom: var(--line-inv);
+}
+
+.menu-name {
+  font-size: var(--fs-menu);
+  overflow-wrap: anywhere;
+}
+
+.menu-status {
+  text-align: right;
+}
+
+.menu-arrow {
+  visibility: hidden;
+}
+
+.menu-row:hover,
+.menu-row:focus-visible {
+  background: var(--bg);
+  color: var(--ink);
+}
+
+.menu-row:hover .menu-arrow,
+.menu-row:focus-visible .menu-arrow {
+  visibility: visible;
+}
+
+.menu :focus-visible {
+  outline: 1px solid var(--ink);
+  outline-offset: -4px;
+}
+
+.menu-foot {
+  display: flex;
+  margin-top: auto;
+  border-top: var(--line-inv);
+}
+
+.menu-foot > * {
+  padding: var(--s-12);
+  border-right: var(--line-inv);
+  white-space: nowrap;
+}
+
+.menu-foot a:hover,
+.menu-foot a:focus-visible,
+.menu-foot button:hover,
+.menu-foot button:focus-visible {
+  background: var(--bg);
+  color: var(--ink);
+}
+
+.half {
+  padding: 0 var(--s-4);
+}
+
+.half.on {
+  background: var(--inv-ink);
+  color: var(--inv-bg);
+}
+
+.menu-toggle:hover .half.on,
+.menu-toggle:focus-visible .half.on {
+  background: var(--ink);
+  color: var(--bg);
+}
+
+.short {
+  display: none;
+}
+
+.menu-foot .menu-time {
+  margin-left: auto;
+  border-right: 0;
+  border-left: var(--line-inv);
+}
+
+@media (max-width: 480px) {
+  .menu-foot {
+    flex-wrap: wrap;
+  }
+
+  .menu-foot > * {
+    padding: var(--s-8) var(--s-12);
+  }
+
+  .long {
+    display: none;
+  }
+
+  .short {
+    display: inline;
+  }
+
+  .half {
+    padding: 0;
+  }
+
+  .menu-foot .menu-time {
+    flex: 1 0 100%;
+    margin-left: 0;
+    border-left: 0;
+    border-top: var(--line-inv);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .menu,
+  .menu.is-open {
+    transition: none;
+  }
+
+  .menu li,
+  .menu-foot {
+    opacity: 1;
+    transition: none !important;
+  }
+}

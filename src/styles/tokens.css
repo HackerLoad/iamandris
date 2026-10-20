@@ -1,0 +1,49 @@
+:root {
+  --paper: #F2EFE7;
+  --forest: #145A3A;
+  --night: #0D0F0E;
+
+  /* Light (Default) */
+  --bg: var(--paper);
+  --ink: var(--forest);
+
+  --accent-bg: var(--forest);
+  --accent-ink: var(--paper);
+
+  --inv-bg: var(--ink);
+  --inv-ink: var(--bg);
+  --line: 1px solid var(--ink);
+  --line-inv: 1px solid var(--inv-ink);
+  --grid-line: color-mix(in srgb, var(--ink) 15%, transparent);
+
+  --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  --s-4: 4px;
+  --s-8: 8px;
+  --s-12: 12px;
+  --s-24: 24px;
+  --s-48: 48px;
+  --s-96: 96px;
+
+  --nav-h: 48px;
+  --fs-display-xl: clamp(3rem, 14vw, 14rem);
+  --fs-menu: clamp(2.5rem, 9vw, 8rem);
+  --fs-wordmark: clamp(16px, 1.8vw, 22px);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --bg: var(--night);
+    --ink: var(--paper);
+  }
+}
+
+:root[data-theme="light"] {
+  --bg: var(--paper);
+  --ink: var(--forest);
+}
+
+:root[data-theme="dark"] {
+  --bg: var(--night);
+  --ink: var(--paper);
+}

@@ -1,0 +1,132 @@
+.about {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  height: 100svh;
+  min-height: 640px;
+  border-bottom: var(--line);
+}
+
+.about-img {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  border-right: var(--line);
+}
+
+.about-img svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  stroke: currentColor;
+  stroke-width: 1px;
+}
+
+.about-img figcaption {
+  position: relative;
+  padding: var(--s-4) var(--s-8);
+  background: var(--bg);
+  border-top: var(--line);
+  border-right: var(--line);
+}
+
+.about-main {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.about-top {
+  flex: 0 0 33.333%;
+  display: flex;
+  align-items: flex-end;
+  padding: var(--s-12);
+  border-bottom: var(--line);
+}
+
+.about-title {
+  font-size: clamp(2.5rem, min(9vw, 20svh), 16rem);
+  overflow-wrap: anywhere;
+}
+
+.about-text {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--s-12);
+  padding: var(--s-12);
+  border-bottom: var(--line);
+  font-size: clamp(1rem, 1.3vw, 1.375rem);
+  line-height: 1.3;
+}
+
+.about-text p {
+  max-width: 56ch;
+}
+
+.about-fact {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: var(--s-12);
+  padding: var(--s-8) var(--s-12);
+  border-bottom: var(--line);
+}
+
+.about-cta {
+  padding: var(--s-12);
+  background: var(--accent-bg);
+  color: var(--accent-ink);
+}
+
+.about-cta:hover,
+.about-cta:focus-visible {
+  background: var(--bg);
+  color: var(--ink);
+}
+
+@media (max-width: 720px) {
+  .about {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-height: 100svh;
+  }
+
+  .about-img {
+    flex: 0 0 22svh;
+    border-right: 0;
+    border-bottom: var(--line);
+  }
+
+  .about-main {
+    flex: 1;
+  }
+
+  .about-title {
+    font-size: 12vw;
+  }
+
+  .about-top {
+    flex: 0 0 auto;
+    padding: var(--s-24) var(--s-12) var(--s-12);
+  }
+
+  .about-text {
+    gap: var(--s-8);
+    font-size: 14px;
+    line-height: 1.3;
+  }
+
+  .about-fact {
+    padding: var(--s-4) var(--s-12);
+  }
+}
+
+.about-img img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 25%;
+}

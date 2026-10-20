@@ -1,0 +1,32 @@
+.legal-head {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--s-48);
+  min-height: 40svh;
+  padding: var(--s-12);
+  border-bottom: var(--line);
+}
+
+.legal-title {
+  font-size: clamp(2.5rem, 11vw, 11rem);
+  overflow-wrap: anywhere;
+}
+
+.legal-block {
+  display: grid;
+  grid-template-columns: 4fr 8fr;
+  gap: var(--s-12);
+  padding: var(--s-12);
+  border-bottom: var(--line);
+}
+
+.legal-block p {
+  max-width: 70ch;
+}
+
+@media (max-width: 720px) {
+  .legal-block {
+    grid-template-columns: 1fr;
+  }
+}

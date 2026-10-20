@@ -1,0 +1,89 @@
+.navbar {
+  --n-bg: var(--bg);
+  --n-ink: var(--ink);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  height: var(--nav-h);
+  display: flex;
+  background: var(--n-bg);
+  color: var(--n-ink);
+  border-bottom: 1px solid var(--n-ink);
+  transform: translateY(0);
+  transition: transform 200ms steps(4);
+}
+
+.navbar.is-hidden {
+  transform: translateY(-100%);
+}
+
+.navbar.is-open {
+  --n-bg: var(--inv-bg);
+  --n-ink: var(--inv-ink);
+}
+
+.spacer {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.cell {
+  display: flex;
+  align-items: center;
+  gap: var(--s-12);
+  height: 100%;
+  padding: 0 var(--s-12);
+  background: var(--n-bg);
+  color: var(--n-ink);
+  white-space: nowrap;
+}
+
+.cell:hover,
+.cell:focus-visible {
+  background: var(--n-ink);
+  color: var(--n-bg);
+}
+
+.navbar :focus-visible {
+  outline: 1px solid var(--n-bg);
+  outline-offset: -4px;
+}
+
+.menu-btn {
+  border-left: 1px solid var(--n-ink);
+  border-right: 1px solid var(--n-ink);
+}
+
+.wordmark {
+  display: inline-flex;
+  font-size: var(--fs-wordmark);
+  line-height: 1;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.wordmark > span {
+  display: inline-block;
+  text-align: center;
+  font-weight: 700;
+}
+
+.wordmark > .wm-light {
+  font-weight: 400;
+}
+
+@media (max-width: 480px) {
+  .cell {
+    gap: var(--s-8);
+    padding: 0 var(--s-8);
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .navbar {
+    transition: none;
+  }
+}
