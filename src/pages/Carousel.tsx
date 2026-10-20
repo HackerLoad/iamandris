@@ -55,6 +55,7 @@ export function Carousel() {
                 <img src={projectImage(p.name)} alt="" draggable={false} />
               </span>
               <span className="car-name display">{p.name}</span>
+              <span className="car-desc">{p.desc}</span>
               <span className="car-tags">
                 {p.tags.map((tag) => (
                   <span key={tag} className="tag label">

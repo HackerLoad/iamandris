@@ -453,6 +453,22 @@
   color: var(--accent-ink);
 }
 
+.car-desc {
+  display: none;
+  padding: var(--s-8) var(--s-12);
+  border-top: var(--line);
+}
+
+.car-item.is-center .car-desc {
+  display: block;
+}
+
+@media (max-width: 720px) {
+  .car-item.is-center .car-desc {
+    display: none;
+  }
+}
+
 .car-tags {
   display: flex;
   flex-wrap: wrap;

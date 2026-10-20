@@ -41,7 +41,7 @@ export const de = {
     text: [
       'Ich bin 21, studiere und bin gerade in Gera. Eigentlich komme ich aus Thüringen, deshalb gefällt mir der Kleinstadt-Flair hier.',
       'Angefangen hat alles mit 12: Ich war Admin auf einem Minecraft-Server und habe mir die Plugins, die ich brauchte, einfach selbst geschrieben. Danach kamen Websites für Dinge, die ich auf RP-Servern angeboten habe. Der Name HackerLoad ist mein Gamertag von damals und ist bis heute geblieben.',
-      'Inzwischen baue ich meistens Lösungen für kleine Probleme aus meinem Alltag, statt dafür zu bezahlen. Aktuell arbeite ich an der cornerGuider-App. Neben dem Code spiele ich Gitarre und Klavier, gehe ab und zu ins Gym und höre ziemlich alles an Musik. Diese Seite ist mehr Werkstatt als Bewerbungsmappe.',
+      'Inzwischen baue ich meistens Lösungen für kleine Probleme aus meinem Alltag, statt dafür zu bezahlen. Mein Lieblingsprojekt ist die cornerGuider-App: Sie sagt Motorradfahrern auf einer GPX-Route die nächste Kurve an, ohne Karte und ohne Ablenkung. Neben dem Code spiele ich Gitarre und Klavier, gehe ab und zu ins Gym und höre ziemlich alles an Musik. Diese Seite ist mehr Werkstatt als Bewerbungsmappe.',
     ],
     facts: [
       { k: 'ALTER', v: '21' },
@@ -255,9 +255,9 @@ export const de = {
     formSend: 'ABSENDEN',
     formHint: 'Pflichtfeld',
     projects: [
-      { name: 'cornerGuider', tags: ['APP', 'TYPESCRIPT', 'GPX'], year: '2026', url: 'https://github.com/HackerLoad/cornerGuider' },
-      { name: 'touchBarText', tags: ['MACOS', 'SWIFT', 'TOOL'], year: '2026', url: 'https://github.com/HackerLoad/touchBarText' },
-      { name: 'walletStalker', tags: ['BOT', 'PYTHON', 'SOLANA'], year: '2026', url: 'https://github.com/HackerLoad/walletStalker' },
+      { name: 'cornerGuider', tags: ['APP', 'REACT NATIVE', 'GPX'], year: '2026', desc: 'App für Motorradfahrer: sagt auf einer GPX-Route die nächste Kurve an. Nur Kurven, keine Karte.', url: 'https://github.com/HackerLoad/cornerGuider' },
+      { name: 'touchBarText', tags: ['MACOS', 'SWIFT', 'TOOL'], year: '2026', desc: 'macOS-Menüleisten-App, die in jeder App Sonderzeichen einfügt – per Touch Bar oder Hotkey.', url: 'https://github.com/HackerLoad/touchBarText' },
+      { name: 'walletStalker', tags: ['BOT', 'PYTHON', 'SOLANA'], year: '2026', desc: 'Telegram-Bot, der Solana-Wallets überwacht und bei neuen Transaktionen benachrichtigt. Läuft in Docker auf dem Raspberry Pi.', url: 'https://github.com/HackerLoad/walletStalker' },
     ],
     prev: 'ZURÜCK',
     next: 'VOR',
