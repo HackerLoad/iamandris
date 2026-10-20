@@ -10,17 +10,17 @@ export function AboutSection() {
 
   return (
     <section className="about" id="about">
-      <figure className="about-img">
+      <figure className="about-img" data-reveal="fade">
         <img src={portrait} alt="" draggable={false} />
         <figcaption className="label">[{a.portrait}]</figcaption>
       </figure>
 
       <div className="about-main">
         <div className="about-top">
-          <h2 className="display about-title">{t.pages.about.name}</h2>
+          <h2 className="display about-title" data-reveal="wipe">{t.pages.about.name}</h2>
         </div>
 
-        <div className="about-text">
+        <div className="about-text" data-reveal="fade">
           {a.text.map((p) => (
             <p key={p}>{p}</p>
           ))}
@@ -28,14 +28,14 @@ export function AboutSection() {
 
         <dl className="about-facts">
           {a.facts.map((f) => (
-            <div key={f.k} className="about-fact">
+            <div key={f.k} className="about-fact" data-reveal="fade">
               <dt className="label">{f.k}</dt>
               <dd className="label">{f.v}</dd>
             </div>
           ))}
         </dl>
 
-        <Link className="about-cta" to={buildPath(lang, 'contact')}>
+        <Link className="about-cta" data-reveal="fade" to={buildPath(lang, 'contact')}>
           <span className="label">[{a.contact} →]</span>
         </Link>
       </div>

@@ -40,12 +40,12 @@ export function Showcase({ top = false }: { top?: boolean }) {
         <div className="sc-grid">
           <div className="sc-cell sc-c12">
             <p className="label">H1 / DISPLAY</p>
-            <h2 className="display sc-h1">
+            <h2 className="display sc-h1" data-reveal="wipe">
               {s.lead}
               <span className="label sc-sup">[{s.leadTag}]</span>
             </h2>
           </div>
-          <div className="sc-cell sc-c12 sc-carousel-cell">
+          <div className="sc-cell sc-c12 sc-carousel-cell" data-reveal="fade">
             <Carousel />
           </div>
         </div>

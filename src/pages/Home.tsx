@@ -3,6 +3,7 @@ import { Showcase } from './Showcase'
 import { AboutSection } from './AboutSection'
 import { ContactSection } from './ContactSection'
 import { Meta } from '../components/Meta'
+import { useReveal } from '../hooks/useReveal'
 import './Home.css'
 
 const COLUMNS = Array.from({ length: 12 })
@@ -10,6 +11,7 @@ const COLUMNS = Array.from({ length: 12 })
 export function Home() {
   const { t } = useLang()
   const l = t.landing
+  useReveal()
 
   return (
     <>
@@ -17,7 +19,7 @@ export function Home() {
       <section className="hero" id="top">
         <div className="grid12" aria-hidden="true">
           {COLUMNS.map((_, i) => (
-            <span key={i} />
+            <span key={i} style={{ '--i': i } as React.CSSProperties} />
           ))}
         </div>
 

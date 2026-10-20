@@ -11,15 +11,15 @@ export function ContactSection() {
   return (
     <section className="contact" id="contact">
       <div className="contact-top">
-        <h2 className="display contact-title">{t.pages.contact.name}</h2>
-        <p className="contact-sub">{c.sub}</p>
+        <h2 className="display contact-title" data-reveal="wipe">{t.pages.contact.name}</h2>
+        <p className="contact-sub" data-reveal="fade">{c.sub}</p>
       </div>
 
       <ul>
         {c.rows.map((r, i) => {
           const external = HREFS[i].startsWith('http')
           return (
-            <li key={r.k}>
+            <li key={r.k} data-reveal="fade">
               <a
                 className="contact-row"
                 href={HREFS[i]}
