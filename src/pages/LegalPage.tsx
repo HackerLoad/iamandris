@@ -12,7 +12,7 @@ export function LegalPage({ kind }: { kind: LegalKey }) {
     <>
       <title>{`${title} — IAMANDRIS`}</title>
       <section className="legal-head">
-        <p className="label">{kind === 'privacy' ? l.draftPrivacy : l.draft}</p>
+        <p className="label">{(kind === 'privacy' ? l.draftPrivacy : l.draft) || `[${title}]`}</p>
         <h1 className="display legal-title">{title}</h1>
       </section>
       {sections.map((s) => (

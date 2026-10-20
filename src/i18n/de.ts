@@ -66,7 +66,7 @@ export const de = {
   },
   legal: {
     draftPrivacy: '',
-    draft: 'ENTWURF — Angaben in [ECKIGEN KLAMMERN] sind noch auszufüllen.',
+    draft: '',
     privacyTitle: 'DATENSCHUTZ',
     privacy: [
       {
@@ -213,8 +213,8 @@ export const de = {
     ],
     imprintTitle: 'IMPRESSUM',
     imprint: [
-      { h: 'ANGABEN GEMÄSS § 5 DDG', p: '[VOLLSTÄNDIGER NAME], [STRASSE HAUSNUMMER], [PLZ ORT]' },
-      { h: 'KONTAKT', p: 'E-Mail: contact@iamandris.online' },
+      { h: 'ANGABEN GEMÄSS § 5 DDG', p: 'Maxim Andris, Platanenstraße 9, 07549 Gera' },
+      { h: 'KONTAKT', p: 'Telefon: 0176 72768237. E-Mail: contact@iamandris.online' },
     ],
   },
   showcase: {
