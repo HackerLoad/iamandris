@@ -56,7 +56,7 @@ export const en: Dict = {
     rows: [
       { k: 'MAIL', v: 'CONTACT@IAMANDRIS.ONLINE' },
       { k: 'GITHUB', v: 'GITHUB.COM/HACKERLOAD' },
-      { k: 'LINKEDIN', v: 'PLACEHOLDER' },
+      { k: 'LINKEDIN', v: 'LINKEDIN.COM/IN/MAXIM-ANDRIS-98779528B' },
     ],
   },
   footer: {
